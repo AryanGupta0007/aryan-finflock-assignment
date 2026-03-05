@@ -23,7 +23,7 @@ The notebook is organised to address the assignment parts as follows:
 - **Part 3 – Feature Engineering**: Computes daily returns, log returns, 20‑day and 50‑day simple moving averages, and rolling 30‑day volatility of returns for each stock and stores them as additional columns.
 - **Part 4 – Basic Analytics**: Derives summary statistics (mean daily return, standard deviation of returns, approximate annualised volatility) and a correlation matrix of daily returns across all tickers.
 - **Part 5 – Visualisation**: Produces plots for price history (closing price vs. date), moving averages overlaid on price, and a correlation heatmap of daily returns.
-- **Part 6 – (Optional) Strategy Evaluation**: Implements a simple 20/50‑day moving‑average crossover strategy for one stock and compares its cumulative return to a buy‑and‑hold benchmark.
+- **Part 6 – Strategy Evaluation**: Implements a simple 20/50‑day moving‑average crossover strategy for one stock and compares its cumulative return to a buy‑and‑hold benchmark.
 
 Refer to the top markdown cells in `main.ipynb` for a more detailed narrative description of each step.
 
@@ -37,12 +37,11 @@ You will need Python 3.x and the following Python packages:
 - `pandas`
 - `numpy`
 - `matplotlib`
-- `seaborn` (if you want enhanced styling for plots)
-
+- `backtrader`
 Install dependencies with:
 
 ```bash
-pip install yfinance pandas numpy matplotlib seaborn
+pip install yfinance pandas numpy matplotlib backtrader
 ```
 
 If you prefer, you can create a virtual environment first:
@@ -81,9 +80,9 @@ You should document any additional cleaning logic you add, especially if you dec
 
 ---
 
-## Moving Average Strategy (Optional Part 6)
+## Moving Average Strategy 
 
-The optional strategy component implements a **simple moving‑average crossover strategy** for one selected stock (for example, NVDA):
+The optional strategy component implements a **simple moving‑average crossover strategy** for one selected stock (NVDA) via Backtrader:
 
 - **Signals**:
   - Go **long** when the 20‑day simple moving average (`SMA_20`) crosses above the 50‑day simple moving average (`SMA_50`).
