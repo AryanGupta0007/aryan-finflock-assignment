@@ -85,12 +85,12 @@ You should document any additional cleaning logic you add, especially if you dec
 
 The optional strategy component implements a **simple moving‑average crossover strategy** for one selected stock (for example, NVDA):
 
-- **Signals**:\
-  - Go **long** when the 20‑day simple moving average (`SMA_20`) crosses above the 50‑day simple moving average (`SMA_50`).\
-  - Exit (or go to cash) when `SMA_20` crosses back below `SMA_50`.\
+- **Signals**:
+  - Go **long** when the 20‑day simple moving average (`SMA_20`) crosses above the 50‑day simple moving average (`SMA_50`).
+  - Exit (or go to cash) when `SMA_20` crosses back below `SMA_50`.
   - A `crossover` indicator column is used to encode whether the short‑term average is above or below the long‑term average.
-- **Performance**:\
-  - Strategy returns are computed based on these signals and compared against a **buy‑and‑hold** benchmark over the same period.\
+- **Performance**:
+  - Strategy returns are computed based on these signals and compared against a **buy‑and‑hold** benchmark over the same period.
   - Cumulative returns for both strategies can be plotted and/or printed in the notebook to allow visual and numerical comparison.
 
 This satisfies the optional **Part 6** requirements from the assignment brief.
